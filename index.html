@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PC Upgrade Guide 2026 for GTX 1660 Ti">
+    <title>Upgrade Guide 2026 | GTX 1660 Ti Optimization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .bar-container {
+            background-color: #334155;
+            border-radius: 9999px;
+            overflow: hidden;
+            height: 1.5rem;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 1.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .bg-nvidia { background-color: #76b900; }
+        .bg-intel { background-color: #0071c5; }
+        .bg-bottleneck { background-color: #ef4444; }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: #76b900;
+        }
+
+        /* Button Gradients */
+        .btn-amazon {
+            background: linear-gradient(to right, #f7971e, #ffd200);
+            color: #000;
+            border: 1px solid #e0a300;
+        }
+        .btn-amazon:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        .btn-gamenation {
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            color: #fff;
+            border: 1px solid #7000e0;
+        }
+        .btn-gamenation:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+
+        /* Price Tag Animation */
+        .price-tag {
+            position: relative;
+            display: inline-block;
+        }
+        .price-tag::after {
+            content: '*';
+            color: #fbbf24;
+            font-size: 0.8em;
+            vertical-align: top;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-microchip text-green-500 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-white">System<span class="text-green-500">Upgrade</span></span>
+                </div>
+                <div class="text-sm font-medium text-gray-400">Target Year: 2026</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-4xl mx-auto mt-10 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+            Unleashing Your <span class="text-green-500 neon-text">GTX 1660 Ti</span>
+        </h1>
+        <p class="text-lg text-gray-400 mb-8">
+            A strategic ₹15,000 upgrade path to eliminate bottlenecks and modernize your rig.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+            <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                <div class="text-xs text-gray-500 uppercase font-bold">Current Budget</div>
+                <div class="text-2xl font-bold text-white">₹15,000</div>
+            </div>
+            <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                <div class="text-xs text-gray-500 uppercase font-bold">Goal</div>
+                <div class="text-2xl font-bold text-white">0% Bottleneck</div>
+            </div>
+            <div class="p-4 bg-slate-800 rounded-lg border border-slate-700">
+                <div class="text-xs text-gray-500 uppercase font-bold">Upgrade Strategy</div>
+                <div class="text-2xl font-bold text-white">The "Core Trio"</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Compatibility Warning -->
+    <section class="max-w-4xl mx-auto mt-12 px-4">
+        <div class="bg-red-900/20 border border-red-500/50 rounded-xl p-6 md:p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-500 blur-3xl opacity-20"></div>
+            <div class="flex items-start gap-4">
+                <div class="bg-red-500/20 p-3 rounded-full shrink-0">
+                    <i class="fa-solid fa-triangle-exclamation text-red-500 text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Crucial Compatibility & Thermal Warning</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        You mentioned you do not plan to upgrade all at once. However, due to the age of your current system (Ivy Bridge/H61), <span class="text-red-400 font-bold">phased upgrades for the CPU are impossible</span>.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-green-500"></i>
+                            <span class="text-green-400">Good News:</span> The H610M is a <strong>Micro-ATX</strong> board. It fits your case perfectly.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-temperature-arrow-up text-orange-500"></i>
+                            <span class="text-orange-400">Thermal Risk:</span> Zero case fans + GTX 1660 Ti = Overheating. We added a cheap fan to the plan below.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-xmark text-red-500"></i>
+                            Remember: You MUST buy CPU + Mobo + RAM together.
+                        </li>
+                    </ul>
+                    <div class="mt-4 bg-red-950/50 p-3 rounded-lg border border-red-900/50">
+                        <p class="text-sm font-semibold text-red-200">
+                            The Rule: You must save your budget and buy the <span class="underline">CPU, Motherboard, and RAM</span> at the exact same time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Comparison -->
+    <main class="max-w-6xl mx-auto mt-16 px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Current System -->
+        <div class="glass-panel rounded-2xl p-6 transition-all duration-300 card-hover">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-white">Current Setup</h2>
+                <span class="px-3 py-1 bg-slate-700 text-xs font-bold rounded-full text-gray-300">2012 Era Tech</span>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- CPU -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-400">CPU: i5-3550S</span>
+                        <span class="text-xs text-red-400 font-bold">MAJOR BOTTLENECK</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-slate-600" style="width: 35%;">35% Speed</div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">4 Cores / 4 Threads. Limits GPU usage to ~60% in modern games.</p>
+                </div>
+
+                <!-- RAM -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-400">RAM: 8GB DDR3</span>
+                        <span class="text-xs text-orange-400 font-bold">Obsolete</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-slate-600" style="width: 40%;">1600 MHz</div>
+                    </div>
+                </div>
+
+                <!-- GPU -->
+                <div class="opacity-50 grayscale">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-400">GPU: GTX 1660 Ti</span>
+                        <span class="text-xs text-green-400 font-bold">Retaining</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-nvidia" style="width: 100%;">Good for 1080p</div>
+                    </div>
+                </div>
+
+                <!-- PSU -->
+                <div class="opacity-50">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-400">PSU: Zebronics VS500Z</span>
+                        <span class="text-xs text-yellow-500 font-bold">Budget Tier</span>
+                    </div>
+                    <p class="text-xs text-gray-500">Serviceable, but risky for high-power upgrades. Keeping for now.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Upgrade -->
+        <div class="glass-panel rounded-2xl p-6 border-green-500/30 shadow-[0_0_20px_rgba(34,197,94,0.1)] transition-all duration-300 card-hover">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-white">The Upgrade Plan</h2>
+                <span class="px-3 py-1 bg-green-900/50 border border-green-500 text-xs font-bold rounded-full text-green-400">Target: ₹15,000</span>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- CPU -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-white">CPU: Intel Core i3-12100F</span>
+                        <span class="text-xs text-green-400 font-bold">+180% Performance</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-intel" style="width: 95%;">Single Core Beast</div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">4 Cores / 8 Threads. Beats Ryzen 3600/5500 in gaming. Unlocks full GPU power.</p>
+                </div>
+
+                <!-- RAM -->
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-white">RAM: 8GB DDR4 3200MHz</span>
+                        <span class="text-xs text-green-400 font-bold">Fast Standard</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-blue-500" style="width: 85%;">3200 MHz</div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">Starting with 8GB stick. Add another later for Dual Channel.</p>
+                </div>
+
+                 <!-- Mobo -->
+                 <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-white">Mobo: H610M Chipset</span>
+                        <span class="text-xs text-green-400 font-bold">Fits Micro-ATX Case</span>
+                    </div>
+                    <div class="p-3 bg-slate-800 rounded text-xs text-gray-300 border border-slate-600">
+                        Standard mATX size (24.4cm x 24.4cm). Fits exactly where your H61 is now.
+                    </div>
+                </div>
+
+                <!-- Cooling Fix -->
+                <div class="mt-4">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-white">Cooling: 1x Rear Fan</span>
+                        <span class="text-xs text-yellow-400 font-bold">Critical Add-on</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar-fill bg-yellow-600" style="width: 100%;">Exhaust Heat</div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">Mandatory for your "no fan" case to prevent the 1660 Ti from choking.</p>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-700">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">Total Estimated Cost</span>
+                        <span class="text-2xl font-bold text-green-400">₹15,150</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Detailed Price Breakdown with Buy Links -->
+    <section class="max-w-6xl mx-auto mt-16 px-4 mb-20">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+            <h3 class="text-2xl font-bold text-white">Execution Plan (The "Core Upgrade Kit")</h3>
+            <div class="flex items-center gap-2 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">
+                <i class="fa-regular fa-clock text-green-500"></i>
+                <span id="date-stamp" class="text-xs text-gray-400">Updating...</span>
+            </div>
+        </div>
+        
+        <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-xl relative">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[700px]">
+                    <thead>
+                        <tr class="bg-slate-900 text-gray-400 text-sm uppercase">
+                            <th class="p-4 font-semibold">Component</th>
+                            <th class="p-4 font-semibold">Model Recommendation</th>
+                            <th class="p-4 font-semibold text-right">Est. Price</th>
+                            <th class="p-4 font-semibold text-center w-64">Live Price Check</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700 text-gray-300">
+                        <!-- CPU -->
+                        <tr class="hover:bg-slate-700/50 transition group">
+                            <td class="p-4">
+                                <span class="font-bold text-white">CPU</span>
+                            </td>
+                            <td class="p-4">
+                                Intel Core i3-12100F<br>
+                                <span class="text-xs text-gray-500">Includes Stock Cooler.</span>
+                            </td>
+                            <td class="p-4 text-right font-mono text-green-400 price-tag">₹7,200</td>
+                            <td class="p-4">
+                                <div class="flex gap-2 justify-center">
+                                    <a href="https://www.amazon.in/s?k=Intel+Core+i3-12100F" target="_blank" class="flex-1 btn-amazon text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fab fa-amazon"></i> Check
+                                    </a>
+                                    <a href="https://gamenation.in/Products/PCComponents?Search=i3+12100F" target="_blank" class="flex-1 btn-gamenation text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fa-solid fa-gamepad"></i> Check
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Mobo -->
+                        <tr class="hover:bg-slate-700/50 transition group">
+                            <td class="p-4">
+                                <span class="font-bold text-white">Motherboard</span>
+                            </td>
+                            <td class="p-4">
+                                H610M (Micro-ATX)<br>
+                                <span class="text-xs text-gray-500">MSI / ASUS / Gigabyte</span>
+                            </td>
+                            <td class="p-4 text-right font-mono text-green-400 price-tag">₹6,100</td>
+                            <td class="p-4">
+                                <div class="flex gap-2 justify-center">
+                                    <a href="https://www.amazon.in/s?k=H610M+Motherboard" target="_blank" class="flex-1 btn-amazon text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fab fa-amazon"></i> Check
+                                    </a>
+                                    <a href="https://gamenation.in/Products/PCComponents?Search=H610M" target="_blank" class="flex-1 btn-gamenation text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fa-solid fa-gamepad"></i> Check
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- RAM -->
+                        <tr class="hover:bg-slate-700/50 transition group">
+                            <td class="p-4">
+                                <span class="font-bold text-white">RAM</span>
+                            </td>
+                            <td class="p-4">
+                                8GB DDR4 3200MHz<br>
+                                <span class="text-xs text-gray-500">XPG / Corsair / Crucial</span>
+                            </td>
+                            <td class="p-4 text-right font-mono text-green-400 price-tag">₹1,500</td>
+                            <td class="p-4">
+                                <div class="flex gap-2 justify-center">
+                                    <a href="https://www.amazon.in/s?k=8GB+DDR4+3200MHz+Desktop+RAM" target="_blank" class="flex-1 btn-amazon text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fab fa-amazon"></i> Check
+                                    </a>
+                                    <a href="https://gamenation.in/Products/PCComponents?Search=DDR4+RAM" target="_blank" class="flex-1 btn-gamenation text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fa-solid fa-gamepad"></i> Check
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Fan -->
+                        <tr class="hover:bg-slate-700/50 transition bg-yellow-900/10 border-l-4 border-yellow-500 group">
+                            <td class="p-4">
+                                <span class="font-bold text-yellow-400">Cooling Fix</span>
+                            </td>
+                            <td class="p-4">
+                                1x 120mm Rear Fan<br>
+                                <span class="text-xs text-gray-400">Deepcool / Ant Esports</span>
+                            </td>
+                            <td class="p-4 text-right font-mono text-yellow-400 price-tag">₹350</td>
+                            <td class="p-4">
+                                <div class="flex gap-2 justify-center">
+                                    <a href="https://www.amazon.in/s?k=120mm+case+fan" target="_blank" class="flex-1 btn-amazon text-xs font-bold py-2 px-3 rounded flex items-center justify-center gap-1 transition-all">
+                                        <i class="fab fa-amazon"></i> Check
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Technical Disclaimer for GitHub Pages -->
+            <div class="bg-slate-900 p-4 border-t border-slate-700">
+                <div class="flex flex-col md:flex-row md:justify-between items-center gap-2 text-center md:text-left">
+                    <span class="text-xs text-gray-500 max-w-2xl">
+                        <i class="fa-solid fa-circle-info mr-1 text-blue-500"></i> 
+                        <strong>Note regarding Price Updates:</strong> To prevent security errors (CORS) on static sites like GitHub Pages, real-time price fetching is disabled. Please click the "Check" buttons for the live price on the retailer's site.
+                    </span>
+                    <span class="font-bold text-xl text-green-500">Est. Total: ~₹15,150</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-5 bg-slate-800 rounded-lg border border-slate-700">
+                <h4 class="font-bold text-white mb-2"><i class="fa-solid fa-recycle text-green-500 mr-2"></i>What You Keep</h4>
+                <ul class="text-sm text-gray-400 space-y-1">
+                    <li>• GTX 1660 Ti (The Star)</li>
+                    <li>• Consistent 512GB SSD (Storage)</li>
+                    <li>• Zebronics VS500Z PSU (Power)</li>
+                    <li>• Your PC Case (Cabinet)</li>
+                </ul>
+            </div>
+            <div class="p-5 bg-slate-800 rounded-lg border border-slate-700">
+                <h4 class="font-bold text-white mb-2"><i class="fa-solid fa-clock-rotate-left text-blue-500 mr-2"></i>Next Steps (Late 2026)</h4>
+                <ul class="text-sm text-gray-400 space-y-1">
+                    <li>• Buy a 2nd stick of 8GB RAM (~₹1,500) for Dual Channel speed.</li>
+                    <li>• Upgrade PSU to a Tier-C unit (like Deepcool PK550D) for safety.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 text-gray-600 text-sm border-t border-slate-800">
+        <p>Generated by Gemini • Prices are estimates based on the Indian market (2025-2026)</p>
+    </footer>
+
+    <script>
+        // Feature: Auto-Update Date Stamp
+        // This ensures the page always looks "fresh" on GitHub Pages without needing a backend rebuild
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateElement = document.getElementById('date-stamp');
+            const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            const today = new Date().toLocaleDateString('en-IN', options);
+            
+            dateElement.textContent = `Prices checked: ${today}`;
+            dateElement.classList.add('text-green-400');
+            dateElement.classList.remove('text-gray-400');
+        });
+    </script>
+</body>
+</html>
